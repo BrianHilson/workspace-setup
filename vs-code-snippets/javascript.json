@@ -1,0 +1,103 @@
+
+{
+  "Block Comment": {
+    "prefix": "/**",
+    "description": "FNI-style Block Comment",
+    "body": [
+      "//****************************************",
+      "// ${TM_SELECTED_TEXT}$0",
+      "//****************************************"
+    ]
+  },
+  "Module Starting Point": {
+    "prefix": "/module",
+    "description": "Basic structure of a module",
+    "body": [
+        "var $0 = (function() {",
+        "  // Private variables",
+        "",
+        "  // Visible interface",
+        "  var visible = {};",
+        "",
+        "  //****************************************",
+        "  // Initialize",
+        "  //****************************************",
+        "",
+        "  visible.Initialize = function(options) {",
+        "",
+        "  }",
+        "",
+        "  // Return public interface",
+        "  return visible;",
+        "",
+        "})"
+    ]
+  },
+  "console.log()": {
+    "prefix": "/log",
+    "description": "Wrap in console.log()",
+    "body": [
+        "console.log(${TM_SELECTED_TEXT}$0);"
+    ]
+  },
+  "for loop": {
+    "prefix": "/for",
+    "body": [
+      "for(var ${1:i} = 0; ${1} < ${2}.length; ${1}++) {",
+      "  $3",
+      "}"
+    ],
+    "description": "Standard for loop"
+  },
+  "for in loop": {
+    "prefix": "/forin",
+    "body": [
+      "for (var ${1:key} in ${2}) {",
+      "  if (array.hasOwnProperty($1)) {",
+      "    $3",
+      "  }",
+      "}"
+    ],
+    "description": "for in loop"
+  },
+  "addEventListener": {
+    "prefix": "/ael",
+    "body": [
+      "$1.addEventListener('${2:click}', function($3) {",
+      "  $4",
+      "});"
+    ],
+    "description": "Adding event listener"
+  },
+  "function expression": {
+    "prefix": "/funcexp",
+    "body": [
+    "var ${1} = function($2) {",
+    "  $3",
+    "}"
+    ],
+    "description": "Adding function expression"
+  },
+  "setTimeout": {
+    "prefix": "/sto",
+    "body": [
+    "var $1 = setTimeout(function($2) {",
+    "  $3",
+    "}, $4);"
+    ],
+    "description": "Set timout function"
+  },  "document.querySelector": {
+    "prefix": "/dqs",
+    "body": [
+      "document.querySelector('$0');"
+    ],
+    "description": "document query selector"
+  },
+  "document.querySelectorAll": {
+    "prefix": "/dqsa",
+    "body": [
+      "document.querySelectorAll('$0');"
+    ],
+    "description": "document query selector all"
+  }   
+}
