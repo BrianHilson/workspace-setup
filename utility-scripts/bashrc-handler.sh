@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 function bashrc() {
     action=$1
 
